@@ -17,13 +17,13 @@ AWS configuration works using `~/.aws/credentials` as written in [AWS JavaScript
 As specified [in the docs](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html#Setting_the_Region)
 
  > The AWS SDK for Node.js doesn't select the region by default.
- 
+
 so you should take care of that. See the examples below.
 
 ## Usage
 
 Please refer to [AWS CloudWatch Logs documentation](http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutLogEvents.html) for possible contraints that might affect you.
-Also have a look at [AWS CloudWatch Logs limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html).
+Also have a look at [AWS CloudWatch Logs limits](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_limits.html), ideally you should have only 1 source sending events to 1 stream, this library assumes you are follow this best practice.
 
 ```js
 var winston = require('winston'),
